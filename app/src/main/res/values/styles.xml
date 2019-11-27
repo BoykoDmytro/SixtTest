@@ -17,4 +17,11 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+
+    <declare-styleable name="RoundedImageView">
+
+        <attr name="corner_radius" format="float" />
+        <attr name="make_circle" format="boolean" />
+
+    </declare-styleable>
 </resources>
