@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="@dimen/margin_16">
+    android:padding="@dimen/padding_8">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/list_car_ui_image"
@@ -22,8 +22,8 @@
         android:layout_marginTop="@dimen/margin_8"
         android:ellipsize="end"
         android:maxLines="2"
-        android:textStyle="bold"
         android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/list_car_ui_image"
         app:layout_constraintTop_toTopOf="parent"
@@ -44,6 +44,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_16"
+        android:ellipsize="end"
+        android:maxLines="1"
         app:layout_constraintBottom_toBottomOf="@+id/list_car_ui_group_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/barrier"
@@ -64,6 +66,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_16"
+        android:ellipsize="end"
+        android:maxLines="1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/barrier"
         app:layout_constraintTop_toTopOf="@+id/list_car_ui_model_color_text"

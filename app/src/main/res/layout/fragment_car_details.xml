@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_16">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/f_car_details_image"
+            android:layout_width="@dimen/image_big_size"
+            android:layout_height="@dimen/image_big_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@mipmap/ic_launcher" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/f_car_details_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="@+id/f_car_details_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/f_car_details_image"
+            app:layout_constraintTop_toTopOf="@+id/f_car_details_image"
+            tools:text="Name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/f_car_details_modelIdentifier_text"
+            style="@style/AppTheme.TextDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/model_identifier"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/f_car_details_image" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/f_car_details_modelIdentifier_value"
+            style="@style/AppTheme.SubTextDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrier"
+            app:layout_constraintTop_toTopOf="@+id/f_car_details_modelIdentifier_text"
+            tools:text="ModelIdentifier value" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/f_car_details_modelName_text"
+            style="@style/AppTheme.TextDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/model_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/f_car_details_modelIdentifier_text" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/f_car_details_modelName_value"
+            style="@style/AppTheme.SubTextDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrier"
+            app:layout_constraintTop_toTopOf="@+id/f_car_details_modelName_text"
+            tools:text="Model name value" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/f_car_details_make_text"
+            style="@style/AppTheme.TextDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/make"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/f_car_details_modelName_text" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/f_car_details_make_value"
+            style="@style/AppTheme.SubTextDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrier"
+            app:layout_constraintTop_toTopOf="@+id/f_car_details_make_text"
+            tools:text="Name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/f_car_details_group_text"
+            style="@style/AppTheme.TextDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/group"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/f_car_details_make_text" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/f_car_details_make_group_value"
+            style="@style/AppTheme.SubTextDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrier"
+            app:layout_constraintTop_toTopOf="@+id/f_car_details_group_text"
+            tools:text="Name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/f_car_details_color_text"
+            style="@style/AppTheme.TextDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/f_car_details_group_text" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/f_car_details_color_value"
+            style="@style/AppTheme.SubTextDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrier"
+            app:layout_constraintTop_toTopOf="@+id/f_car_details_color_text"
+            tools:text="Name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/f_car_details_series_text"
+            style="@style/AppTheme.TextDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/series"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/f_car_details_color_text" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/f_car_details_series_value"
+            style="@style/AppTheme.SubTextDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrier"
+            app:layout_constraintTop_toTopOf="@+id/f_car_details_series_text"
+            tools:text="Name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/f_car_details_fuelType_text"
+            style="@style/AppTheme.TextDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/fuel_type"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/f_car_details_series_text" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/f_car_details_fuelType_value"
+            style="@style/AppTheme.SubTextDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrier"
+            app:layout_constraintTop_toTopOf="@+id/f_car_details_fuelType_text"
+            tools:text="Name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/f_car_details_fuelLevel_text"
+            style="@style/AppTheme.TextDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/fuel_level"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/f_car_details_fuelType_text" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/f_car_details_fuelLevel_value"
+            style="@style/AppTheme.SubTextDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrier"
+            app:layout_constraintTop_toTopOf="@+id/f_car_details_fuelLevel_text"
+            tools:text="Name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/f_car_details_transmission_text"
+            style="@style/AppTheme.TextDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/transmission"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/f_car_details_fuelLevel_text" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/f_car_details_transmission_value"
+            style="@style/AppTheme.SubTextDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrier"
+            app:layout_constraintTop_toTopOf="@+id/f_car_details_transmission_text"
+            tools:text="Name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/f_car_details_licensePlate_text"
+            style="@style/AppTheme.TextDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/license_plate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/f_car_details_transmission_text" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/f_car_details_licensePlate_value"
+            style="@style/AppTheme.SubTextDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrier"
+            app:layout_constraintTop_toTopOf="@+id/f_car_details_licensePlate_text"
+            tools:text="Name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/f_car_details_location_text"
+            style="@style/AppTheme.TextDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/location"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/f_car_details_licensePlate_text" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/f_car_details_location_value"
+            style="@style/AppTheme.SubTextDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrier"
+            app:layout_constraintTop_toTopOf="@+id/f_car_details_location_text"
+            tools:text="Name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/f_car_details_innerCleanliness_text"
+            style="@style/AppTheme.TextDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/inner_cleanliness"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/f_car_details_location_text" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/f_car_details_innerCleanliness_value"
+            style="@style/AppTheme.SubTextDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrier"
+            app:layout_constraintTop_toTopOf="@+id/f_car_details_innerCleanliness_text"
+            tools:text="Name" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="f_car_details_modelIdentifier_text,f_car_details_modelName_text,f_car_details_make_text,f_car_details_group_text,f_car_details_color_text,f_car_details_series_text,f_car_details_fuelType_text,f_car_details_fuelLevel_text,f_car_details_transmission_text,f_car_details_licensePlate_text,f_car_details_location_text,f_car_details_innerCleanliness_text
+" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

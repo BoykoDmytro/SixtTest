@@ -36,7 +36,7 @@ abstract class BaseCoroutinesUseCase<T> {
                 response(NetworkErrorUiModel(0, ex.message))
             } catch (ex: HttpException) {
                 val responseBody = ex.response()?.errorBody()
-                val error = if (responseBody?.contentType()?.subtype() == "json") {
+                val error = if (responseBody?.contentType()?.subtype == "json") {
                     val errorResponse =
                         Gson().fromJson(responseBody.string(), ErrorResponse::class.java)
                     NetworkErrorUiModel(ex.code(), errorResponse.message)

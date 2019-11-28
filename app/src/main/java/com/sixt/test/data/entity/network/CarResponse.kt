@@ -28,9 +28,9 @@ data class CarResponse(
     @SerializedName("licensePlate")
     var licensePlate: String? = null,
     @SerializedName("latitude")
-    var latitude: Float? = null,
+    var latitude: Double? = null,
     @SerializedName("longitude")
-    var longitude: Float? = null,
+    var longitude: Double? = null,
     @SerializedName("innerCleanliness")
     var innerCleanliness: String? = null,
     @SerializedName("carImageUrl")

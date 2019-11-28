@@ -4,10 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.annotation.LayoutRes
 import androidx.annotation.StringRes
-import com.sixt.test.R
 import com.sixt.test.presentation.mvpview.IBaseMvpView
 import dagger.android.support.DaggerFragment
 import moxy.MvpDelegate
@@ -88,17 +86,9 @@ abstract class BaseFragment : DaggerFragment(), IBaseMvpView {
     private fun getBaseActivity(): BaseActivity? =
         if (activity is BaseActivity) activity as BaseActivity else null
 
-    protected fun notImplementedToast() {
-        activity?.let { Toast.makeText(it, R.string.not_implemented, Toast.LENGTH_SHORT).show() }
-    }
+    override fun showProgressDialog() {}
 
-    override fun showProgressDialog() {
-
-    }
-
-    override fun hideProgressDialog() {
-
-    }
+    override fun hideProgressDialog() {}
 
     override fun showErrorToast(error: String) {
         getBaseActivity()?.showErrorToast(error)
@@ -106,14 +96,6 @@ abstract class BaseFragment : DaggerFragment(), IBaseMvpView {
 
     override fun showErrorToast(resId: Int) {
         getBaseActivity()?.showErrorToast(resId)
-    }
-
-    protected fun showAppBar() {
-        getBaseActivity()?.showAppBar()
-    }
-
-    protected fun hideAppBar() {
-        getBaseActivity()?.hideAppBar()
     }
 
     protected fun setAppBarTitle(@StringRes titleResId: Int) {
@@ -124,12 +106,8 @@ abstract class BaseFragment : DaggerFragment(), IBaseMvpView {
         getBaseActivity()?.setAppBarTitle(title)
     }
 
-    protected fun lockDrawerLayout() {
-        getBaseActivity()?.lockDrawerLayout()
-    }
-
-    protected fun unlockDrawerLayout() {
-        getBaseActivity()?.unlockDrawerLayout()
+    protected fun setBackButton(isEnabled: Boolean) {
+        getBaseActivity()?.setBackButton(isEnabled)
     }
 
     fun getMvpDelegate(): MvpDelegate<*> {

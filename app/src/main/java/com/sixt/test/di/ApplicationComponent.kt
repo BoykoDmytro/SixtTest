@@ -2,8 +2,11 @@ package com.sixt.test.di
 
 import android.app.Application
 import android.content.Context
-import com.sixt.test.di.modules.*
 import com.sixt.test.SixtApp
+import com.sixt.test.di.modules.ActivityModule
+import com.sixt.test.di.modules.ApplicationModule
+import com.sixt.test.di.modules.NetworkModule
+import com.sixt.test.di.modules.RepositoryModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjector

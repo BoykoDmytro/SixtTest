@@ -1,6 +1,7 @@
 package com.sixt.test.data.entity.presentation
 
 import android.os.Parcelable
+import com.google.android.gms.maps.model.LatLng
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
@@ -17,8 +18,13 @@ data class CarUIItem(
     var fuelLevel: Float? = null,
     var transmission: String? = null,
     var licensePlate: String? = null,
-    var latitude: Float? = null,
-    var longitude: Float? = null,
+    var latitude: Double = 0.0,
+    var longitude: Double = 0.0,
     var innerCleanliness: String? = null,
     var carImageUrl: String? = null
-) : Parcelable
+) : Parcelable {
+
+    fun getLatLng(): LatLng = LatLng(latitude, longitude)
+
+    fun getDescription(): String = "$name with location: $latitude, $longitude"
+}

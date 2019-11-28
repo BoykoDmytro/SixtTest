@@ -1,6 +1,5 @@
 package com.sixt.test.presentation.ui.home.fragment
 
-import android.content.Context
 import android.os.Bundle
 import android.view.View
 import androidx.core.view.isVisible
@@ -11,29 +10,23 @@ import com.sixt.test.presentation.adapters.CarListAdapter
 import com.sixt.test.presentation.adapters.OnItemClickListener
 import com.sixt.test.presentation.mvpview.home.fragment.CarListView
 import com.sixt.test.presentation.presenter.home.fragment.CarListPresenter
-import com.sixt.test.presentation.ui.BaseFragment
+import com.sixt.test.presentation.ui.listener.InitCarDataListener
 import kotlinx.android.synthetic.main.fragment_car_list.*
 import moxy.presenter.InjectPresenter
 import moxy.presenter.ProvidePresenter
 import javax.inject.Inject
 
-class CarListFragment : BaseFragment(), CarListView, OnItemClickListener<CarUIItem> {
+class CarListFragment : BaseSubHomeFragment(), CarListView, OnItemClickListener<CarUIItem>,
+    InitCarDataListener {
 
     @Inject
     @InjectPresenter
     lateinit var presenter: CarListPresenter
 
     private val carListAdapter: CarListAdapter = CarListAdapter(this)
-    private var onItemClickListener: OnItemClickListener<CarUIItem>? = null
 
     companion object {
         fun newInstance(): CarListFragment = CarListFragment()
-    }
-
-    @Suppress("UNCHECKED_CAST")
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        onItemClickListener = context as? OnItemClickListener<CarUIItem>
     }
 
     override fun getLayoutId(): Int = R.layout.fragment_car_list
@@ -45,16 +38,11 @@ class CarListFragment : BaseFragment(), CarListView, OnItemClickListener<CarUIIt
                 layoutManager = LinearLayoutManager(context)
                 adapter = carListAdapter
             }
-            presenter.getCars()
+            presenter.setupData(initCarDataDelegate?.getCars())
         }
     }
 
-    override fun onResume() {
-        super.onResume()
-        setAppBarTitle(R.string.cars)
-    }
-
-    override fun setupCars(cars: List<CarUIItem>) {
+    override fun initCars(cars: List<CarUIItem>) {
         carListAdapter.setItems(cars)
     }
 
@@ -68,4 +56,8 @@ class CarListFragment : BaseFragment(), CarListView, OnItemClickListener<CarUIIt
 
     @ProvidePresenter
     fun providePresenter(): CarListPresenter = presenter
+
+    override fun setupCars(cars: List<CarUIItem>?) {
+        presenter.setupData(cars)
+    }
 }

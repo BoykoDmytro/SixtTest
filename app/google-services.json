@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "6044538229",
+    "firebase_url": "https://sixttest-1574890989982.firebaseio.com",
+    "project_id": "sixttest-1574890989982",
+    "storage_bucket": "sixttest-1574890989982.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:6044538229:android:0e3c8b67c47b4fde0faf3c",
+        "android_client_info": {
+          "package_name": "com.sixt.test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "6044538229-e34s7emhn3mo7su1mp8h931u1ctfii7m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVnWQqOBNtyvnhr5j5W-zN4UAXZ4npVxU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "6044538229-e34s7emhn3mo7su1mp8h931u1ctfii7m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

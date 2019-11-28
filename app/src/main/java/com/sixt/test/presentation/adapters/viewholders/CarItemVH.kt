@@ -2,7 +2,6 @@ package com.sixt.test.presentation.adapters.viewholders
 
 import android.view.ViewGroup
 import androidx.annotation.LayoutRes
-import com.sixt.test.common.GlideApp
 import com.sixt.test.common.loadImage
 import com.sixt.test.data.entity.presentation.CarUIItem
 import com.sixt.test.presentation.adapters.OnItemClickListener

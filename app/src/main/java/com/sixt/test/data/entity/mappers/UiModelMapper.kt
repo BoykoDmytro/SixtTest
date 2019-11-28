@@ -19,9 +19,9 @@ object UiModelMapper {
             model.fuelLevel,
             model.transmission,
             model.licensePlate,
-            model.latitude,
-            model.longitude,
+            model.latitude ?: 0.0,
+            model.longitude ?: 0.0,
             model.innerCleanliness,
-            model.carImageUrl)
-
+            model.carImageUrl
+        )
 }

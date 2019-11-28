@@ -11,4 +11,17 @@
     <string name="color">Color</string>
     <string name="cars">Cars</string>
     <string name="enter_car_name">Enter car name</string>
+    <string name="map">Map</string>
+    <string name="home">Home</string>
+    <string name="cars_details">Car Details</string>
+    <string name="model_identifier">Model Identifier</string>
+    <string name="model_name">Model name</string>
+    <string name="make">Make</string>
+    <string name="series">Series</string>
+    <string name="fuel_type">Fuel type</string>
+    <string name="fuel_level">Fuel level</string>
+    <string name="transmission">Transmission</string>
+    <string name="license_plate">License Plate</string>
+    <string name="location">Location</string>
+    <string name="inner_cleanliness">Inner Cleanliness</string>
 </resources>
